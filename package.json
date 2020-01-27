@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/jest": "^24.0.18",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1"
@@ -10,11 +11,17 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test -env=jsdom",
+    "eject": "react-scripts eject",
+    "format-code": "prettier --write \"**/*.+(js|json|css|md|mdx|html)\""
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format-code"
+    }
   },
   "browserslist": {
     "production": [
@@ -27,5 +34,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.1.0",
+    "@testing-library/react": "^9.1.4",
+    "husky": "^3.0.5",
+    "jest-extended": "^0.11.2",
+    "prettier": "^1.18.2"
   }
 }

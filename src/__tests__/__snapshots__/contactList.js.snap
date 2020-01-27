@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rendering contacts: 
+    Array [
+      "Samires",
+      "Jeftar",
+    ]
+   1`] = `
+Array [
+  "Samires",
+  "Jeftar",
+]
+`;
